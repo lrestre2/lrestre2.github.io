@@ -1,9 +1,10 @@
 /**
  * Handles the contact form submission.
  * @function
- * @param {string} message - The message to be sent.
+ * @param {Event} event - The form submission event.
  */
-function handleFormSubmit(message) {
+function handleFormSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
     const form = document.querySelector("form");
     const nameInput = document.querySelector("#name");
     const emailInput = document.querySelector("#email");
@@ -22,9 +23,34 @@ function handleFormSubmit(message) {
         alert("Please fill out all the fields!");
     }
 }
+/**
+ * Adds fade-in effect on page load.
+ */
+function fadeIn() {
+    document.body.style.opacity = "1"; // Make body fully visible
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", handleFormSubmit);
+/**
+ * Adds fade-out effect before navigating to a new page.
+ */
+function fadeOut() {
+    const links = document.querySelectorAll("a");
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            const href = link.getAttribute("href");
+            if (href && !href.startsWith("#") && !href.startsWith("mailto:")) {
+                event.preventDefault();
+                document.body.style.opacity = "0"; // Start fade-out
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // Match this to the CSS transition duration
+            }
+        });
+    });
+}
+
+// Initialize transitions
+document.addEventListener("DOMContentLoaded", function () {
+    fadeIn(); // Trigger fade-in effect on page load
+    fadeOut(); // Handle fade-out effect during navigation
 });
-

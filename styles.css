@@ -5,17 +5,28 @@
     box-sizing: border-box;
 }
 
+/* Page Fade-In and Fade-Out */
+body {
+    opacity: 0; /* Start with invisible body */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in/out effect */
+}
+
+body.loaded {
+    opacity: 1; /* Fully visible when the 'loaded' class is applied */
+}
+
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
+    color: #90db8c;
+    background-color: #171e2d;
     margin: 0;
 }
 
 header {
-    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
+    background: linear-gradient(90deg, #499f4d 0%, #90db8c 100%);
+    color: #171e2d;
     padding: 1.5rem 0;
     text-align: center;
 }
@@ -33,7 +44,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background: #333;
+    background: #171e2d;
     padding: 0.5rem 0;
 }
 
@@ -42,14 +53,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #90db8c;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #6a11cb;
+    color: #f7dc6f;
 }
 
 section {
@@ -59,7 +70,7 @@ section {
 }
 
 h2 {
-    color: #2575fc;
+    color: #90db8c;
     margin-bottom: 1rem;
 }
 
@@ -72,8 +83,9 @@ ul li {
     margin-bottom: 0.5rem;
 }
 
+/* Contact Form */
 form {
-    background: white;
+    background: #171e2d;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -85,19 +97,22 @@ form label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: #90db8c;
 }
 
 form input, form textarea {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 5px;
+    background: #171e2d;
+    color: #90db8c;
 }
 
 form button {
-    background: #2575fc;
-    color: white;
+    background: #90db8c;
+    color: #171e2d;
     padding: 0.7rem 1.5rem;
     border: none;
     border-radius: 5px;
@@ -107,29 +122,61 @@ form button {
 }
 
 form button:hover {
-    background: #6a11cb;
+    background: #54a04b;
 }
 
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+}
+
+.about-me-photo {
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.about-container p {
+    flex: 1;
+}
+
+.about-me-photo:hover {
+    transform: scale(1.1);
+}
+
+.about-me-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #90db8c;
+}
+
+/* Contact Section */
 .social-links {
     text-align: center;
     margin-top: 1rem;
 }
 
 .social-links a {
-    color: #2575fc;
+    color: #90db8c;
     margin: 0 0.5rem;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #6a11cb;
+    color: #54a04b;
+    transform: scale(1.1);
 }
 
+/* Footer */
 footer {
-    background: #333;
-    color: white;
+    color: #171e2d;
+    background: #90db8c;
     text-align: center;
     padding: 1rem 0;
     position: relative;
