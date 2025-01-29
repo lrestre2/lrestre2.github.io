@@ -25,7 +25,20 @@
     </nav>
 
     <section>
-        <h2>Get in Touch</h2>
+        <div class="contact-left-title">
+            <h2>Get in Touch</h2>
+            <hr>
+        </div>
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <input type="hidden" name="access_key" value="07f064c8-7af9-4dee-99c4-2a1c79028c1d">
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <input type="text" name="email" placeholder="Your Email" class="contact-inputs" required>
+                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                <button type="submit"> Submit </button>
+            </form>
+        </div>
+<!--         
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -37,7 +50,8 @@
             <textarea id="message" name="message" rows="5" required></textarea>
 
             <button type="submit">Send</button>
-        </form>
+        </form> -->
+        <form action=""></form>
         <div class="social-links">
             <h3>Connect with Me</h3>
             <a href="https://github.com/lrestre2" target="_blank"><i class="fab fa-github"></i> GitHub</a>

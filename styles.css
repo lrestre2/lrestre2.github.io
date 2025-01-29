@@ -5,14 +5,14 @@
     box-sizing: border-box;
 }
 
-/* Page Fade-In and Fade-Out */
+/* Transition effect */
 body {
-    opacity: 0; /* Start with invisible body */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade-in/out effect */
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
 }
 
 body.loaded {
-    opacity: 1; /* Fully visible when the 'loaded' class is applied */
+    opacity: 1; 
 }
 
 /* General Styles */
@@ -83,6 +83,144 @@ ul li {
     margin-bottom: 0.5rem;
 }
 
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 60%;
+}
+
+.about-me-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.about-me-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #90db8c;
+    margin-bottom: 1.5rem;
+}
+
+/* Resume Button */
+.resume-container {
+    margin-top: 10px;
+    text-align: left; /* Align button with text */
+}
+
+.resume-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #54a04b, #90db8c);
+    color: #171e2d;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-button i {
+    margin-right: 8px;
+}
+
+.resume-button:hover {
+    background: linear-gradient(90deg, #4a8048, #54a04b);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    color: #90db8c;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #54a04b;
+    transform: scale(1.1);
+}
+
+/* Responsive: Stack text and image on smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text {
+        max-width: 100%;
+    }
+
+    .resume-container {
+        text-align: center;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+
+    .about-me-photo {
+        margin-top: 20px;
+    }
+}
+
+
+/* Contact Section */
+.contact-left-title h2 {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #90db8c;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.contact-inputs:focus{
+    border: 2px solid #90db8c;
+}
+.contact-inputs::placeholder{
+    color: #90db8c;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #333;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #90db8c, #4a8048);
+    cursor: pointer;
+}
+
 /* Contact Form */
 form {
     background: #171e2d;
@@ -110,51 +248,11 @@ form input, form textarea {
     color: #90db8c;
 }
 
-form button {
-    background: #90db8c;
-    color: #171e2d;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
 
 form button:hover {
-    background: #54a04b;
+    background: #90ff84;
 }
 
-/* About Section */
-.about-container {
-    display: flex;
-    align-items: center;
-}
-
-.about-me-photo {
-    width: 300px;
-    height: 300px;
-    margin-right: 20px;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.about-container p {
-    flex: 1;
-}
-
-.about-me-photo:hover {
-    transform: scale(1.1);
-}
-
-.about-me-text {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #90db8c;
-}
-
-/* Contact Section */
 .social-links {
     text-align: center;
     margin-top: 1rem;
@@ -172,6 +270,39 @@ form button:hover {
     color: #54a04b;
     transform: scale(1.1);
 }
+
+/* Projects Section */
+
+/* MOSPRO LIV Button */
+.mospro-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mospro-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #4a8048, #90db8c);
+    color: #171e2d;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mospro-button i {
+    margin-right: 8px;
+}
+
+.mospro-button:hover {
+    background: linear-gradient(90deg, #38703a, #54a04b);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 
 /* Footer */
 footer {
