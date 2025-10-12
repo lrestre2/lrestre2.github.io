@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Liu Restrepo Sanabria</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -25,26 +26,79 @@
 
     <section>
         <ul>
-            <li><strong>Python Phone App:</strong> Designed an app using the Kivy framework for the front-end and MySQL for handling data management.
-            More information on this project can be found in the Experience section of this webpage.</li>
-            <li><strong>Automatic Conveyor Belt for Sorting:</strong> As an intern at Mahroy, I helped develop an automatic system
-            to sort garment. For this 2-month project, I implemented the PID algorithm to control the conveyor belt by developing C/C++
-            code in the Arduino Framework, using the ESP32Servo, PID_v1, and PMW libraries.</li>
-            <li><strong>MOSPRO LIV:</strong> MOSPRO LIV is a prototype of a car driven by a phone application. 
+            <li>
+                <h3>Real-Time UART GUI PyQt5 for Photon Coincidence</h3>
+                <p>
+                    <em>Undergraduate Research Project — Summer 2025</em>
+                    <br>
+                    <br>
+                    Developed a multithreaded PyQt5-based desktop GUI for monitoring 15-channel photon coincidence events 
+                    from a custom FPGA, using UART communication and pyqtgraph for high-speed plotting.
+                    Implemented live numerical displays, adjustable coincidence windows, event plotting 
+                    with colour customisation, and automated CSV logging with buffered autosave every one second.
+                    </p>
+                    <div class="icon-links">
+                        <a href="https://github.com/Fadhil-Ahmed/pythonCoincideNew" target="_blank" rel="noopener">
+                          <i class="fab fa-github"></i> View Repository
+                        </a>
+                      </div>
+            </li>
+            <li>
+                <h3>DC Motor PID Speed Control System</h3>
+                <p>
+                    <em>Embedded Systems Design project — May 2025</em>
+                    <br>
+                    <br>
+                    Designed and implemented a PID-based PWM controller on Arduino UNO R4 for closed-loop DC motor speed
+                    regulation. Integrated encoder feedback and displayed motor speed (in RPM) in real time on a 16×2 LCD.
+                </p>
+                <div class="icon-links">
+                    <a href="documents/E323_Motor_Liu_Fadhil.pdf" target="_blank" rel="noopener">
+                      <i class="fas fa-file-pdf"></i> View Documentation
+                    </a>
+                </div>
+            </li>
+            <li>
+                <h3>Heartbeat Monitoring System</h3>
+                <p>
+                    <em>Embedded Systems Design project — Apr 2025</em>
+                    <br>
+                    <br>
+                    Developed an 8051-based heartbeat monitor with an Assembly program that leverages 10-ms timer overflows to
+                    measure BPM from interrupt-driven pulse intervals as inputs. Programmed using Assembly language and 
+                    hardware interfacing with a 7-segment display hardwired on a board.                    
+                </p>
+                <div class="icon-links">
+                    <a href="documents/E323_BPMDisplayEKG_Liu_Fadhil-2.pdf" target="_blank" rel="noopener">
+                      <i class="fas fa-file-pdf"></i> View Documentation
+                    </a>
+                </div>
+            </li>
+            <li><h3>Automatic Conveyor Belt for Sorting:</h3> 
+                <em>Intern project — May 2021 - Jul 2021</em>
+                    <br>
+                    <br>
+                <p> As an intern at Mahroy, I helped develop an automatic system to sort garment. For this 
+                    2-month project, I implemented the PID algorithm to control the conveyor belt by developing C/C++
+                    code in the Arduino Framework, using the ESP32Servo, PID_v1, and PMW libraries.</p>
+            </li>
+            <li><h3>MOSPRO LIV:</h3> 
+                <em>Capstone Project for Technician Degree in Electronics — Jan 2021 - Apr 2021</em>
+                    <br>
+                    <br>
+                <p>MOSPRO LIV is a prototype of a car driven by a phone application. 
                 This was my capstone project to graduate as an industrial electronics mid-level technician. 
                 The car prototype consisted of a small car made by recyclable materials, an Arduino Uno as control unit, 
                 an HC-05 Bluetooth module, and two 5-volt DC motors. For direction control, we developed our own 
-                H-bridges with 2n3904 transistors and 1N4007 diodes. 
+                H-bridges with 2n3904 transistors and 1N4007 diodes.</p>
                 
-                For more information on this project, see the slides below (they are in Spanish unfortunately, but you can see the entire process there):
-                </li>
-                
-                <div class="mospro-container">
-                    <a href="documents/MOSPRO LIV.pdf" target="_blank" rel="noopener noreferrer" class="mospro-button">
-                        <i class="fas fa-file-pdf"></i> View MOSPRO LIV Slides
+                For more information on this project, see the slides below — they are in Spanish unfortunately, but you can see the entire process there.
+                <div class="icon-links">
+                    <a href="documents/MOSPRO LIV.pdf" target="_blank" rel="noopener" class="text-link">
+                      <i class="fa-brands fa-github"></i> View MOSPRO LIV Slides
                     </a>
-                </div>
-                
+                  </div>
+                </li>            
         </ul>
     </section>
 
