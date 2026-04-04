@@ -387,3 +387,68 @@ footer p {
   
   /* Give list items a bit more breathing room */
   section ul li { margin-bottom: 1.25rem; }  
+
+  /* Cute robot implementation! */
+  .robot-footer {
+    width: 100%;
+    background: #171e2d;
+    overflow: hidden;
+}
+ 
+.robot-footer-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 0;
+    min-height: 200px;
+}
+ 
+#robot-footer-dots {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+ 
+.robot-stage {
+    position: relative;
+    z-index: 2;
+}
+ 
+.robot-footer-copy {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: #90db8c;
+    color: #171e2d;
+    text-align: center;
+    padding: 0.75rem 0;
+    margin-top: 0.5rem;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+ 
+@keyframes rf-bob {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+}
+@keyframes rf-wave-l {
+    0%, 100% { transform: rotate(0deg)   translateX(-2px); }
+    50%       { transform: rotate(-28deg) translateX(-2px); }
+}
+@keyframes rf-wave-r {
+    0%, 100% { transform: rotate(0deg)  translateX(2px); }
+    50%       { transform: rotate(28deg) translateX(2px); }
+}
+@keyframes rf-heart {
+    0%   { transform: scale(0)   translateY(0);    opacity: 1; }
+    80%  { transform: scale(1.2) translateY(-18px); opacity: 1; }
+    100% { transform: scale(1)   translateY(-22px); opacity: 0; }
+}
+ 
+#rf-body  { animation: rf-bob    2.2s ease-in-out infinite; transform-origin: center bottom; }
+#rf-arm-l { animation: rf-wave-l 2.2s ease-in-out infinite; transform-origin: 12px 4px; }
+#rf-arm-r { animation: rf-wave-r 2.2s ease-in-out infinite; transform-origin: 0px  4px; }
+#rf-heart { animation: rf-heart  2.2s ease-in-out infinite; transform-origin: center bottom; }
