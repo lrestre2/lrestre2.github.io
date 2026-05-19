@@ -25,6 +25,49 @@
     </nav>
 
     <section>
+        <h2>High-Performance Computing</h2>
+        <ul>
+            <li>
+                <h3>Tricolor — Distributed HPC Cluster</h3>
+                <p>
+                    <em>CPSC-375 High-Performance Computing — April 2026</em>
+                    <br><br>
+                    Built a 3-node Beowulf-style cluster from scratch, named after Venezuelan national
+                    symbols: <i>Araguaney</i>, <i>Turpial</i>, and <i>Orquidea</i> (3× Intel i7-10700 / 16 GB,
+                    Ubuntu Server 22.04), coordinated from a macOS head node. Configured passwordless SSH
+                    in all directions, an NFS shared filesystem, and OpenMPI across the private 1 GbE network.
+                    Benchmarked the cluster with HPL, achieving a peak of <strong>242.01 GFLOPS</strong> — a
+                    97.6% improvement over the single-node baseline — through strong-scaling and block-size
+                    parameter sweeps (N up to 60,000, NB up to 384, 48 MPI processes).
+                </p>
+                <div class="icon-links">
+                    <a href="https://github.com/lrestre2/computer-cluster" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                </div>
+            </li>
+            <li>
+                <h3>Parallel FIR Filter Architectures Using MPI</h3>
+                <p>
+                    <em>CPSC-375 High-Performance Computing — Spring 2026</em>
+                    <br><br>
+                    Implemented and benchmarked three FIR filter architectures in distributed-memory MPI,
+                    modelled after the sequential, semi-parallel, and fully parallel designs from the Xilinx
+                    XtremeDSP guide. The semi-parallel version uses coefficient decomposition with
+                    <code>MPI_Reduce</code>; the parallel version uses signal (data) decomposition with
+                    halo exchange. Ran strong-scaling experiments on Trinity's Pine cluster (SLURM, up to
+                    192 MPI processes across 8 nodes) at N=128 taps and L=10<sup>7</sup> samples, with
+                    correctness verified against a binary reference output from the serial baseline.
+                </p>
+                <div class="icon-links">
+                    <a href="https://github.com/lrestre2/fir_mpi" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Embedded Systems &amp; Electronics</h2>
         <ul>
             <li>
                 <h3>Real-Time UART GUI PyQt5 for Photon Coincidence</h3>
